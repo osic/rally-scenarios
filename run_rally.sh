@@ -1,4 +1,5 @@
 #!/bin/bash
+. /home/rally/rally/bin/activate
 echo "Initialize Rally database"
 rally-manage db recreate
 echo "Create a Rally deployment"
