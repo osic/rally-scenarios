@@ -36,8 +36,8 @@
             },
             "runner": {
                 "type": "constant",
-                "times": {{servers_to_build}},
-                "concurrency": 1
+                "times": 1,
+                "concurrency": {{servers_to_build}}
             },
             "context": {
                 "users": {
