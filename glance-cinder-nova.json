@@ -1,0 +1,182 @@
+{% set flavor_name = flavor_name or "m1.tiny" %}
+{% set image_name = image_name or "^cirros.*uec$" %}
+{% set volume_type = volume_type or "" %}
+{% set volume_size = volume_size or 1 %}
+{% set new_volume_size = new_volume_size or 2 %}
+{% set iterations = iterations or 5 %}
+
+{
+    "NovaServers.boot_and_delete_server": [
+        {
+            "args": {
+                "flavor": {
+                    "name": "{{flavor_name}}"
+                },
+                "image": {
+                    "name": "{{image_name}}"
+                },
+                "force_delete": false
+            },
+            "runner": {
+                "type": "constant",
+                "times": {{iterations}},
+                "concurrency": 1
+            },
+            "context": {
+                "users": {
+                    "tenants": 1,
+                    "users_per_tenant": 1
+                }
+            }
+        },
+        {
+            "args": {
+                "flavor": {
+                    "name": "{{flavor_name}}"
+                },
+                "image": {
+                    "name": "{{image_name}}"
+                },
+                "force_delete": false,
+                "alternate_name": "novaservers.boot_server_and_delete_single"
+            },
+            "runner": {
+                "type": "constant",
+                "times": 1,
+                "concurrency": 1
+            },
+            "context": {
+                "users": {
+                    "tenants": 1,
+                    "users_per_tenant": 1
+                }
+            }
+        }
+    ],
+    "NovaServers.boot_server_from_volume_and_delete": [
+        {
+            "args": {
+                "flavor": {
+                    "name": "{{flavor_name}}"
+                },
+                "image": {
+                    "name": "{{image_name}}"
+                },
+                "volume_size": {{volume_size}},
+                "volume_type": "{{volume_type}}",
+                "force_delete": false
+            },
+            "runner": {
+                "type": "constant",
+                "times": {{iterations}},
+                "concurrency": 1
+            },
+            "context": {
+                "users": {
+                    "tenants": 1,
+                    "users_per_tenant": 1
+                }
+            }
+        }
+    ],
+    "CinderVolumes.create_and_delete_snapshot": [
+        {
+            "args": {
+                "force": false
+            },
+            "runner": {
+                "type": "constant",
+                "times": {{iterations}},
+                "concurrency": 1
+            },
+            "context": {
+                "volumes": {
+                    "size": {{volume_size}}
+                },
+                "users": {
+                    "tenants": 1,
+                    "users_per_tenant": 1
+                }
+            }
+        }
+    ],
+    "CinderVolumes.create_volume_and_clone": [
+        {
+            "args": {
+                "size": {{volume_size}}
+            },
+            "runner": {
+                "type": "constant",
+                "times": {{iterations}},
+                "concurrency": 1
+            },
+            "context": {
+                "users": {
+                    "tenants": 1,
+                    "users_per_tenant": 1
+                }
+            }
+        }
+    ],
+    "CinderVolumes.create_volume_from_snapshot": [
+        {
+            "args": {
+                "do_delete": true
+            },
+            "runner": {
+                "type": "constant",
+                "times": {{iterations}},
+                "concurrency": 1
+            },
+            "context": {
+                "volumes": {
+                    "size": {{volume_size}}
+                },
+                "users": {
+                    "tenants": 1,
+                    "users_per_tenant": 1
+                }
+            }
+        }
+    ],
+     "CinderVolumes.create_and_extend_volume": [
+        {
+            "args": {
+                "size": {{volume_size}},
+                "new_size": {{new_volume_size}}
+            },
+            "runner": {
+                "type": "constant",
+                "times": {{iterations}},
+                "concurrency": 1
+            },
+            "context": {
+                "users": {
+                    "tenants": 1,
+                    "users_per_tenant": 1
+                }
+            }
+        }
+    ],
+    "GlanceImages.create_and_delete_image": [
+        {
+            "args": {
+                "image_location": "http://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-disk1.img",
+                "container_format": "bare",
+                "disk_format": "qcow2"
+            },
+            "runner": {
+                "type": "constant",
+                "times": {{iterations}},
+                "concurrency": 1
+            },
+            "context": {
+                "users": {
+                    "tenants": 1,
+                    "users_per_tenant": 1
+                }
+            }
+        }
+    ]
+}
+
