@@ -5,7 +5,8 @@ Artifacts related to running Rally scenarios
 File used to the cloud type, auth-url, region_name, endpoint_type, and admin credentials.
 
 # osic-glance-cinder-nova.json
-Parameters: Flavor_name, image_name, volume_type, volume_size, new_volume_size, iterations	
+Parameters: Flavor_name, image_name, volume_type, volume_size, new_volume_size, and iterations.
+
 Used to test different scenarios for glance, cinder and nova. This file test:
 NovaServers.boot_and_delete_server
 NovaServers.boot_server_from_volume_and_delete
