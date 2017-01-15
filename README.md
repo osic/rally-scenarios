@@ -1,7 +1,7 @@
 # rally
 Artifacts related to running Rally scenarios. These scenarios are executed using a shell script as a controller on the Jenkins Server webpage. The variables IP, USER, PASSWORD, TENANT, RALLY_TASK, and RALLY_PARAS are first updated by the shell script with the credentials from the existing workspace. The  script next step is to send the credentials,the rally task, and the run_rally.sh shell script up to the rally box. The result files are stored into the workspace. Any leftover logs from previous runs are deleted and the logs from openstack & rally are compressed and uploaded to files. The files are then parsed and uploaded to elastic search.
 
-# Existing.json 
+# existing.json 
 File used to specify and pass the cloud type, auth-url, region_name, endpoint_type, and admin credentials for each rally task.
 
 # osic-glance-cinder-nova.json
