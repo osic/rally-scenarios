@@ -2,19 +2,19 @@
 Artifacts related to running Rally scenarios
 
 # Existing.json 
-File used to the cloud type, auth-url, region_name, endpoint_type, and admin credentials.
+File used to specify and pass the cloud type, auth-url, region_name, endpoint_type, and admin credentials for each rally task.
 
 # osic-glance-cinder-nova.json
 Parameters: Flavor_name, image_name, volume_type, volume_size, new_volume_size, and iterations.
 
 Used to test different scenarios for glance, cinder and nova. This file test:   
-NovaServers.boot_and_delete_server,   
-NovaServers.boot_server_from_volume_and_delete,   
-CinderVolumes.create_and_delete_snapshot,  
-CinderVolumers.create_volume_and_clone,   
-CinderVolumes.create_volume_from_snapshot,  
-CinderVolumes.create_and_extend_volume,   
-GlanceImages.create_and_delete_image  
+NovaServers.boot_and_delete_server - test if nova can boot and delete 1 server.   
+NovaServers.boot_server_from_volume_and_delete - test if nova can boot and delete a server from a cinder volume.   
+CinderVolumes.create_and_delete_snapshot - test if cinder can create and delete a snapshot.
+CinderVolumers.create_volume_and_clone - test if cinder can create a volume and clone another from the newly created volume.  
+CinderVolumes.create_volume_from_snapshot - test if cinder can create a volume from a snapshot.  
+CinderVolumes.create_and_extend_volume - test if cinder can create a volume and extend the newly created volume.   
+GlanceImages.create_and_delete_image  - test if glance can create and delete images.
 
 # osic-keystone-prime-scenario.json:
 KeystoneBasic.authenticate_user_and_validate_token - Used to authenticate 1 user and token to prime for the osic-keystone-scenario.
@@ -23,7 +23,7 @@ KeystoneBasic.authenticate_user_and_validate_token - Used to authenticate 1 user
 KeystoneBasic.authenticate_user_and_validate_token - Used to authenticate 20 users and validate their tokens.
 
 # osic-nova-1-server-scenario.json
-NovaServers.boot_server - Used to boot one server to prime for the n-server-scenario. 
+NovaServers.boot_server - Used to boot 1 server to prime for the n-server-scenario. 
 Parameters: flavor_name.
 
 # osic-nova-n-server-scenario.json
