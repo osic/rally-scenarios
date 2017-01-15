@@ -9,12 +9,12 @@ Parameters: Flavor_name, image_name, volume_type, volume_size, new_volume_size, 
 
 Used to test different scenarios for glance, cinder and nova. This file test:
 
-NovaServers.boot_and_delete_server, 
+NovaServers.boot_and_delete_server,   
 NovaServers.boot_server_from_volume_and_delete,   
 CinderVolumes.create_and_delete_snapshot,  
 CinderVolumers.create_volume_and_clone,   
 CinderVolumes.create_volume_from_snapshot,  
-CinderVolumes.create_and_extend_volume, 
+CinderVolumes.create_and_extend_volume,   
 GlanceImages.create_and_delete_image  
 
 # osic-keystone-prime-scenario.json:
