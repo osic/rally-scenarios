@@ -7,7 +7,7 @@ File used to specify and pass the cloud type, auth-url, region_name, endpoint_ty
 # osic-glance-cinder-nova.json
 Parameters: Flavor_name, image_name, volume_type, volume_size, new_volume_size, and iterations.
 
-Used to test different scenarios for glance, cinder and nova. This file test:   
+Rally task used to test different scenarios for glance, cinder and nova. This file test:   
 NovaServers.boot_and_delete_server - test if nova can boot and delete 1 server.   
 NovaServers.boot_server_from_volume_and_delete - test if nova can boot and delete a server from a cinder volume.   
 CinderVolumes.create_and_delete_snapshot - test if cinder can create and delete a snapshot.
@@ -17,18 +17,18 @@ CinderVolumes.create_and_extend_volume - test if cinder can create a volume and 
 GlanceImages.create_and_delete_image  - test if glance can create and delete images.
 
 # osic-keystone-prime-scenario.json:
-KeystoneBasic.authenticate_user_and_validate_token - Used to authenticate 1 user and token to prime for the osic-keystone-scenario.
+KeystoneBasic.authenticate_user_and_validate_token - Rally task used to authenticate 1 user and token to prime for the osic-keystone-scenario.
 
 # osic-keystone-scenarion.json
-KeystoneBasic.authenticate_user_and_validate_token - Used to authenticate 20 users and validate their tokens.
+KeystoneBasic.authenticate_user_and_validate_token - Rally task used to authenticate 20 users and validate their tokens.
 
 # osic-nova-1-server-scenario.json
-NovaServers.boot_server - Used to boot 1 server to prime for the n-server-scenario. 
+NovaServers.boot_server - Rally task used to boot 1 server to prime for the n-server-scenario. 
 Parameters: flavor_name.
 
 # osic-nova-n-server-scenario.json
-NovaServers.boot_server - Used to boot a specified number of servers.
+NovaServers.boot_server - Rally task used to boot a specified number of servers.
 Parameters: flavor_name, servers_to_build
 
 # run_rally.sh
-Used to Initialize database, create a rally deployment, and start the rally task.
+Used to initialize rally database, create a rally deployment, and start the rally task.
