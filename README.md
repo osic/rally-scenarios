@@ -11,6 +11,7 @@ File used to specify and pass the cloud type, auth-url, region_name, endpoint_ty
 Parameters: Flavor_name, image_name, volume_type, volume_size, new_volume_size, and iterations.
 
 Rally task used to test different scenarios for glance, cinder and nova. This file test:   
+
 NovaServers.boot_and_delete_server - test if nova can boot and delete 1 server.   
 NovaServers.boot_server_from_volume_and_delete - test if nova can boot and delete a server from a cinder volume.   
 CinderVolumes.create_and_delete_snapshot - test if cinder can create and delete a snapshot.
