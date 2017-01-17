@@ -15,7 +15,7 @@ Rally task used to test different scenarios for glance, cinder and nova. This fi
 NovaServers.boot_and_delete_server - test if nova can boot and delete 1 server.   
 NovaServers.boot_server_from_volume_and_delete - test if nova can boot and delete a server from a cinder volume.   
 CinderVolumes.create_and_delete_snapshot - test if cinder can create and delete a snapshot.
-CinderVolumers.create_volume_and_clone - test if cinder can create a volume and clone another from the newly created volume.  
+CinderVolumers.create_volume_and_clone - test if cinder can create a volume and clone from the newly created volume.  
 CinderVolumes.create_volume_from_snapshot - test if cinder can create a volume from a snapshot.  
 CinderVolumes.create_and_extend_volume - test if cinder can create a volume and extend the newly created volume.   
 GlanceImages.create_and_delete_image  - test if glance can create and delete images.
