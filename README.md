@@ -28,10 +28,12 @@ KeystoneBasic.authenticate_user_and_validate_token - Rally task used to authenti
 
 # osic-nova-1-server-scenario.json
 NovaServers.boot_server - Rally task used to boot 1 server to prime for the n-server-scenario. 
+
 Parameters: flavor_name.
 
 # osic-nova-n-server-scenario.json
 NovaServers.boot_server - Rally task used to boot a specified number of servers.
+
 Parameters: flavor_name, servers_to_build
 
 # run_rally.sh
