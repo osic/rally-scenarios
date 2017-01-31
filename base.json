@@ -1,0 +1,1228 @@
+[
+    {
+        "hooks": [], 
+        "load_duration": 28.94228506088257, 
+        "result": [
+            {
+                "timestamp": 1485884983.132586, 
+                "error": [], 
+                "duration": 5.883173942565918, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 1.0, 
+                "atomic_actions": {
+                    "nova.boot_server": 4.4559831619262695, 
+                    "nova.delete_server": 2.42671799659729
+                }
+            }, 
+            {
+                "timestamp": 1485884990.019275, 
+                "error": [], 
+                "duration": 4.498847007751465, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 1.0, 
+                "atomic_actions": {
+                    "nova.boot_server": 3.0989630222320557, 
+                    "nova.delete_server": 2.399651050567627
+                }
+            }, 
+            {
+                "timestamp": 1485884995.522189, 
+                "error": [], 
+                "duration": 5.169179201126099, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 1.0, 
+                "atomic_actions": {
+                    "nova.boot_server": 3.199547052383423, 
+                    "nova.delete_server": 2.9693551063537598
+                }
+            }, 
+            {
+                "timestamp": 1485885001.694287, 
+                "error": [], 
+                "duration": 4.9224488735198975, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 1.0, 
+                "atomic_actions": {
+                    "nova.boot_server": 3.4922478199005127, 
+                    "nova.delete_server": 2.4298789501190186
+                }
+            }, 
+            {
+                "timestamp": 1485885007.619297, 
+                "error": [], 
+                "duration": 4.455574035644531, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 1.0, 
+                "atomic_actions": {
+                    "nova.boot_server": 3.004481077194214, 
+                    "nova.delete_server": 2.450958013534546
+                }
+            }
+        ], 
+        "key": {
+            "kw": {
+                "runner": {
+                    "type": "constant", 
+                    "concurrency": 1, 
+                    "times": 5
+                }, 
+                "hooks": [], 
+                "args": {
+                    "force_delete": false, 
+                    "flavor": {
+                        "name": "tempest1"
+                    }, 
+                    "image": {
+                        "name": "cirros"
+                    }
+                }, 
+                "sla": {}, 
+                "context": {
+                    "users": {
+                        "users_per_tenant": 1, 
+                        "tenants": 1
+                    }
+                }
+            }, 
+            "name": "NovaServers.boot_and_delete_server", 
+            "pos": 0
+        }, 
+        "full_duration": 32.90212297439575, 
+        "sla": []
+    }, 
+    {
+        "hooks": [], 
+        "load_duration": 4.562345027923584, 
+        "result": [
+            {
+                "timestamp": 1485885017.26657, 
+                "error": [], 
+                "duration": 4.562345027923584, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 1.0, 
+                "atomic_actions": {
+                    "nova.boot_server": 3.1541738510131836, 
+                    "nova.delete_server": 2.407761812210083
+                }
+            }
+        ], 
+        "key": {
+            "kw": {
+                "runner": {
+                    "type": "constant", 
+                    "concurrency": 1, 
+                    "times": 1
+                }, 
+                "hooks": [], 
+                "args": {
+                    "force_delete": false, 
+                    "flavor": {
+                        "name": "tempest1"
+                    }, 
+                    "image": {
+                        "name": "cirros"
+                    }, 
+                    "alternate_name": "novaservers.boot_server_and_delete_single"
+                }, 
+                "sla": {}, 
+                "context": {
+                    "users": {
+                        "users_per_tenant": 1, 
+                        "tenants": 1
+                    }
+                }
+            }, 
+            "name": "NovaServers.boot_and_delete_server", 
+            "pos": 0
+        }, 
+        "full_duration": 8.12239122390747, 
+        "sla": []
+    }, 
+    {
+        "hooks": [], 
+        "load_duration": 124.69391894340515, 
+        "result": [
+            {
+                "timestamp": 1485885027.29229, 
+                "error": [], 
+                "duration": 37.82434701919556, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "glance.create_image": 37.46294903755188, 
+                    "glance.delete_image": 0.3611640930175781
+                }
+            }, 
+            {
+                "timestamp": 1485885065.121765, 
+                "error": [], 
+                "duration": 22.719572067260742, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "glance.create_image": 22.403242111206055, 
+                    "glance.delete_image": 0.3162059783935547
+                }
+            }, 
+            {
+                "timestamp": 1485885087.844768, 
+                "error": [], 
+                "duration": 19.310672998428345, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "glance.create_image": 18.871068954467773, 
+                    "glance.delete_image": 0.43950796127319336
+                }
+            }, 
+            {
+                "timestamp": 1485885107.159202, 
+                "error": [], 
+                "duration": 25.770099878311157, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "glance.create_image": 25.44185996055603, 
+                    "glance.delete_image": 0.32806921005249023
+                }
+            }, 
+            {
+                "timestamp": 1485885132.932374, 
+                "error": [], 
+                "duration": 19.053834915161133, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "glance.create_image": 18.713624954223633, 
+                    "glance.delete_image": 0.34011101722717285
+                }
+            }
+        ], 
+        "key": {
+            "kw": {
+                "runner": {
+                    "type": "constant", 
+                    "concurrency": 1, 
+                    "times": 5
+                }, 
+                "hooks": [], 
+                "args": {
+                    "image_location": "http://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-disk1.img", 
+                    "disk_format": "qcow2", 
+                    "container_format": "bare"
+                }, 
+                "sla": {}, 
+                "context": {
+                    "users": {
+                        "users_per_tenant": 1, 
+                        "tenants": 1
+                    }
+                }
+            }, 
+            "name": "GlanceImages.create_and_delete_image", 
+            "pos": 0
+        }, 
+        "full_duration": 127.16952013969421, 
+        "sla": []
+    }, 
+    {
+        "hooks": [], 
+        "load_duration": 44.463417053222656, 
+        "result": [
+            {
+                "timestamp": 1485885155.430381, 
+                "error": [], 
+                "duration": 7.693940877914429, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 2.0, 
+                "atomic_actions": {
+                    "cinder.create_volume": 2.919348955154419, 
+                    "cinder.extend_volume": 2.259227991104126, 
+                    "cinder.delete_volume": 4.514610052108765
+                }
+            }, 
+            {
+                "timestamp": 1485885165.128428, 
+                "error": [], 
+                "duration": 6.9968581199646, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 2.0, 
+                "atomic_actions": {
+                    "cinder.create_volume": 2.4206628799438477, 
+                    "cinder.extend_volume": 2.260847806930542, 
+                    "cinder.delete_volume": 4.315179824829102
+                }
+            }, 
+            {
+                "timestamp": 1485885174.129412, 
+                "error": [], 
+                "duration": 7.217717170715332, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 2.0, 
+                "atomic_actions": {
+                    "cinder.create_volume": 2.44112491607666, 
+                    "cinder.extend_volume": 2.2613699436187744, 
+                    "cinder.delete_volume": 4.514548063278198
+                }
+            }, 
+            {
+                "timestamp": 1485885183.350638, 
+                "error": [], 
+                "duration": 7.25809907913208, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 2.0, 
+                "atomic_actions": {
+                    "cinder.create_volume": 2.658967971801758, 
+                    "cinder.extend_volume": 2.30509614944458, 
+                    "cinder.delete_volume": 4.293851137161255
+                }
+            }, 
+            {
+                "timestamp": 1485885192.611415, 
+                "error": [], 
+                "duration": 7.28238320350647, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 2.0, 
+                "atomic_actions": {
+                    "cinder.create_volume": 2.440078020095825, 
+                    "cinder.extend_volume": 2.258065938949585, 
+                    "cinder.delete_volume": 4.584069013595581
+                }
+            }
+        ], 
+        "key": {
+            "kw": {
+                "runner": {
+                    "type": "constant", 
+                    "concurrency": 1, 
+                    "times": 5
+                }, 
+                "hooks": [], 
+                "args": {
+                    "new_size": 2, 
+                    "size": 1
+                }, 
+                "sla": {}, 
+                "context": {
+                    "users": {
+                        "users_per_tenant": 1, 
+                        "tenants": 1
+                    }
+                }
+            }, 
+            "name": "CinderVolumes.create_and_extend_volume", 
+            "pos": 0
+        }, 
+        "full_duration": 48.92297887802124, 
+        "sla": []
+    }, 
+    {
+        "hooks": [], 
+        "load_duration": 41.8209810256958, 
+        "result": [
+            {
+                "timestamp": 1485885205.59762, 
+                "error": [], 
+                "duration": 5.124242067337036, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 4.0, 
+                "atomic_actions": {
+                    "cinder.create_volume": 2.532418966293335, 
+                    "cinder.clone_volume": 6.591639041900635
+                }
+            }, 
+            {
+                "timestamp": 1485885214.72549, 
+                "error": [], 
+                "duration": 5.126195907592773, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 4.0, 
+                "atomic_actions": {
+                    "cinder.create_volume": 2.503628969192505, 
+                    "cinder.clone_volume": 6.622378826141357
+                }
+            }, 
+            {
+                "timestamp": 1485885223.854356, 
+                "error": [], 
+                "duration": 5.262215852737427, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 4.0, 
+                "atomic_actions": {
+                    "cinder.create_volume": 2.434864044189453, 
+                    "cinder.clone_volume": 6.827254056930542
+                }
+            }, 
+            {
+                "timestamp": 1485885233.120831, 
+                "error": [], 
+                "duration": 5.067975997924805, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 4.0, 
+                "atomic_actions": {
+                    "cinder.create_volume": 2.4387800693511963, 
+                    "cinder.clone_volume": 6.629091024398804
+                }
+            }, 
+            {
+                "timestamp": 1485885242.191703, 
+                "error": [], 
+                "duration": 5.226897954940796, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 4.0, 
+                "atomic_actions": {
+                    "cinder.create_volume": 2.4437918663024902, 
+                    "cinder.clone_volume": 6.783006906509399
+                }
+            }
+        ], 
+        "key": {
+            "kw": {
+                "runner": {
+                    "type": "constant", 
+                    "concurrency": 1, 
+                    "times": 5
+                }, 
+                "hooks": [], 
+                "args": {
+                    "size": 1
+                }, 
+                "sla": {}, 
+                "context": {
+                    "users": {
+                        "users_per_tenant": 1, 
+                        "tenants": 1
+                    }
+                }
+            }, 
+            "name": "CinderVolumes.create_volume_and_clone", 
+            "pos": 0
+        }, 
+        "full_duration": 64.01570796966553, 
+        "sla": []
+    }, 
+    {
+        "hooks": [], 
+        "load_duration": 2.6441941261291504, 
+        "result": [
+            {
+                "timestamp": 1485885270.804365, 
+                "error": [], 
+                "duration": 2.6441941261291504, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 1.0, 
+                "atomic_actions": {
+                    "nova.boot_server": 3.6437900066375732
+                }
+            }
+        ], 
+        "key": {
+            "kw": {
+                "runner": {
+                    "type": "constant", 
+                    "concurrency": 1, 
+                    "times": 1
+                }, 
+                "hooks": [], 
+                "args": {
+                    "flavor": {
+                        "name": "tempest1"
+                    }, 
+                    "image": {
+                        "name": "cirros"
+                    }
+                }, 
+                "sla": {}, 
+                "context": {
+                    "users": {
+                        "users_per_tenant": 2, 
+                        "tenants": 3
+                    }
+                }
+            }, 
+            "name": "NovaServers.boot_server", 
+            "pos": 0
+        }, 
+        "full_duration": 13.366605997085571, 
+        "sla": []
+    }, 
+    {
+        "hooks": [], 
+        "load_duration": 3.440092086791992, 
+        "result": [
+            {
+                "timestamp": 1485885284.973963, 
+                "error": [], 
+                "duration": 3.3990869522094727, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 1.0, 
+                "atomic_actions": {
+                    "nova.boot_server": 4.3987061977386475
+                }
+            }, 
+            {
+                "timestamp": 1485885284.977779, 
+                "error": [], 
+                "duration": 3.4362761974334717, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 1.0, 
+                "atomic_actions": {
+                    "nova.boot_server": 4.436053991317749
+                }
+            }
+        ], 
+        "key": {
+            "kw": {
+                "runner": {
+                    "type": "constant", 
+                    "concurrency": 2, 
+                    "times": 2
+                }, 
+                "hooks": [], 
+                "args": {
+                    "flavor": {
+                        "name": "tempest1"
+                    }, 
+                    "image": {
+                        "name": "cirros"
+                    }
+                }, 
+                "sla": {}, 
+                "context": {
+                    "users": {
+                        "users_per_tenant": 2, 
+                        "tenants": 3
+                    }
+                }
+            }, 
+            "name": "NovaServers.boot_server", 
+            "pos": 0
+        }, 
+        "full_duration": 14.331731081008911, 
+        "sla": []
+    }, 
+    {
+        "hooks": [], 
+        "load_duration": 2.2742559909820557, 
+        "result": [
+            {
+                "timestamp": 1485885300.441808, 
+                "error": [], 
+                "duration": 0.30667591094970703, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.09251594543457031, 
+                    "keystone_v3.validate_token": 0.21388792991638184
+                }
+            }, 
+            {
+                "timestamp": 1485885300.472412, 
+                "error": [], 
+                "duration": 0.299893856048584, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.10989689826965332, 
+                    "keystone_v3.validate_token": 0.18975305557250977
+                }
+            }, 
+            {
+                "timestamp": 1485885300.484122, 
+                "error": [], 
+                "duration": 0.2734520435333252, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.10503387451171875, 
+                    "keystone_v3.validate_token": 0.16818594932556152
+                }
+            }, 
+            {
+                "timestamp": 1485885300.498477, 
+                "error": [], 
+                "duration": 0.2982470989227295, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.13717103004455566, 
+                    "keystone_v3.validate_token": 0.1607820987701416
+                }
+            }, 
+            {
+                "timestamp": 1485885300.590664, 
+                "error": [], 
+                "duration": 0.35118913650512695, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.13591504096984863, 
+                    "keystone_v3.validate_token": 0.21498489379882812
+                }
+            }, 
+            {
+                "timestamp": 1485885301.012305, 
+                "error": [], 
+                "duration": 0.3276400566101074, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.12216782569885254, 
+                    "keystone_v3.validate_token": 0.20528912544250488
+                }
+            }, 
+            {
+                "timestamp": 1485885301.022133, 
+                "error": [], 
+                "duration": 0.35014796257019043, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.11804008483886719, 
+                    "keystone_v3.validate_token": 0.2319350242614746
+                }
+            }, 
+            {
+                "timestamp": 1485885301.080267, 
+                "error": [], 
+                "duration": 0.3139920234680176, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.12543511390686035, 
+                    "keystone_v3.validate_token": 0.18837499618530273
+                }
+            }, 
+            {
+                "timestamp": 1485885301.144255, 
+                "error": [], 
+                "duration": 0.2995431423187256, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.16031193733215332, 
+                    "keystone_v3.validate_token": 0.13903212547302246
+                }
+            }, 
+            {
+                "timestamp": 1485885301.31305, 
+                "error": [], 
+                "duration": 0.2967250347137451, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.10971808433532715, 
+                    "keystone_v3.validate_token": 0.18677496910095215
+                }
+            }, 
+            {
+                "timestamp": 1485885301.634005, 
+                "error": [], 
+                "duration": 0.2965538501739502, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.13630199432373047, 
+                    "keystone_v3.validate_token": 0.16006684303283691
+                }
+            }, 
+            {
+                "timestamp": 1485885301.710201, 
+                "error": [], 
+                "duration": 0.37587785720825195, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.14004993438720703, 
+                    "keystone_v3.validate_token": 0.23560500144958496
+                }
+            }, 
+            {
+                "timestamp": 1485885301.78222, 
+                "error": [], 
+                "duration": 0.3032071590423584, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.1492900848388672, 
+                    "keystone_v3.validate_token": 0.1530590057373047
+                }
+            }, 
+            {
+                "timestamp": 1485885301.793457, 
+                "error": [], 
+                "duration": 0.33055996894836426, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.11443686485290527, 
+                    "keystone_v3.validate_token": 0.21587800979614258
+                }
+            }, 
+            {
+                "timestamp": 1485885301.945647, 
+                "error": [], 
+                "duration": 0.3055570125579834, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.11191082000732422, 
+                    "keystone_v3.validate_token": 0.19346308708190918
+                }
+            }, 
+            {
+                "timestamp": 1485885302.195319, 
+                "error": [], 
+                "duration": 0.2566230297088623, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.1111900806427002, 
+                    "keystone_v3.validate_token": 0.14525508880615234
+                }
+            }, 
+            {
+                "timestamp": 1485885302.326452, 
+                "error": [], 
+                "duration": 0.30963587760925293, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.1283130645751953, 
+                    "keystone_v3.validate_token": 0.18114900588989258
+                }
+            }, 
+            {
+                "timestamp": 1485885302.419213, 
+                "error": [], 
+                "duration": 0.27384090423583984, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.0870370864868164, 
+                    "keystone_v3.validate_token": 0.1865980625152588
+                }
+            }, 
+            {
+                "timestamp": 1485885302.429235, 
+                "error": [], 
+                "duration": 0.2367689609527588, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.13072896003723145, 
+                    "keystone_v3.validate_token": 0.10585594177246094
+                }
+            }, 
+            {
+                "timestamp": 1485885302.554775, 
+                "error": [], 
+                "duration": 0.16128897666931152, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "keystone_v3.fetch_token": 0.07764697074890137, 
+                    "keystone_v3.validate_token": 0.0834958553314209
+                }
+            }
+        ], 
+        "key": {
+            "kw": {
+                "runner": {
+                    "type": "constant", 
+                    "concurrency": 5, 
+                    "times": 20
+                }, 
+                "hooks": [], 
+                "args": {}, 
+                "sla": {
+                    "failure_rate": {
+                        "max": 0
+                    }
+                }, 
+                "context": {}
+            }, 
+            "name": "KeystoneBasic.authenticate_user_and_validate_token", 
+            "pos": 0
+        }, 
+        "full_duration": 4.78095006942749, 
+        "sla": [
+            {
+                "criterion": "failure_rate", 
+                "detail": "Failure rate criteria 0.00% <= 0.00% <= 0.00% - Passed", 
+                "success": true
+            }
+        ]
+    }, 
+    {
+        "hooks": [], 
+        "load_duration": 72.11839008331299, 
+        "result": [
+            {
+                "timestamp": 1485885308.901602, 
+                "error": [], 
+                "duration": 13.655672073364258, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 4.0, 
+                "atomic_actions": {
+                    "cinder.create_snapshot": 2.3884098529815674, 
+                    "cinder.create_volume": 6.713818073272705, 
+                    "cinder.delete_snapshot": 4.222215890884399, 
+                    "cinder.delete_volume": 4.330352067947388
+                }
+            }, 
+            {
+                "timestamp": 1485885326.561665, 
+                "error": [], 
+                "duration": 9.743600845336914, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 4.0, 
+                "atomic_actions": {
+                    "cinder.create_snapshot": 2.5516960620880127, 
+                    "cinder.create_volume": 4.714548826217651, 
+                    "cinder.delete_snapshot": 4.232659816741943, 
+                    "cinder.delete_volume": 2.2444300651550293
+                }
+            }, 
+            {
+                "timestamp": 1485885340.308426, 
+                "error": [], 
+                "duration": 11.699195146560669, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 4.0, 
+                "atomic_actions": {
+                    "cinder.create_snapshot": 2.38736891746521, 
+                    "cinder.create_volume": 4.610338926315308, 
+                    "cinder.delete_snapshot": 4.3829100131988525, 
+                    "cinder.delete_volume": 4.318233013153076
+                }
+            }, 
+            {
+                "timestamp": 1485885356.012126, 
+                "error": [], 
+                "duration": 11.423074007034302, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 4.0, 
+                "atomic_actions": {
+                    "cinder.create_snapshot": 2.3252580165863037, 
+                    "cinder.create_volume": 4.541965961456299, 
+                    "cinder.delete_snapshot": 4.252816915512085, 
+                    "cinder.delete_volume": 4.302518844604492
+                }
+            }, 
+            {
+                "timestamp": 1485885371.439129, 
+                "error": [], 
+                "duration": 9.580862998962402, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 4.0, 
+                "atomic_actions": {
+                    "cinder.create_snapshot": 2.5628509521484375, 
+                    "cinder.create_volume": 4.573209047317505, 
+                    "cinder.delete_snapshot": 4.230471849441528, 
+                    "cinder.delete_volume": 2.2139809131622314
+                }
+            }
+        ], 
+        "key": {
+            "kw": {
+                "runner": {
+                    "type": "constant", 
+                    "concurrency": 1, 
+                    "times": 5
+                }, 
+                "hooks": [], 
+                "args": {
+                    "do_delete": true
+                }, 
+                "sla": {}, 
+                "context": {
+                    "users": {
+                        "users_per_tenant": 1, 
+                        "tenants": 1
+                    }, 
+                    "volumes": {
+                        "size": 1
+                    }
+                }
+            }, 
+            "name": "CinderVolumes.create_volume_from_snapshot", 
+            "pos": 0
+        }, 
+        "full_duration": 84.6957049369812, 
+        "sla": []
+    }, 
+    {
+        "hooks": [], 
+        "load_duration": 0.9754431247711182, 
+        "result": [
+            {
+                "timestamp": 1485885393.076717, 
+                "error": [
+                    "NotFound", 
+                    "Volume type with name None could not be found. (HTTP 404) (Request-ID: req-df874498-1447-41c9-8072-36a7eff2b196)", 
+                    "Traceback (most recent call last):\n  File \"/usr/local/lib/python2.7/dist-packages/rally/task/runner.py\", line 72, in _run_scenario_once\n    getattr(scenario_inst, method_name)(**scenario_kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/plugins/openstack/scenarios/nova/servers.py\", line 180, in run\n    volume_type=volume_type)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/task/atomic.py\", line 113, in func_atomic_actions\n    f = func(self, *args, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/plugins/openstack/scenarios/cinder/utils.py\", line 158, in _create_volume\n    volume = client.create_volume(size, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/plugins/openstack/wrappers/cinder.py\", line 67, in create_volume\n    volume = self.client.volumes.create(size, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/v2/volumes.py\", line 269, in create\n    return self._create('/volumes', body, 'volume')\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/base.py\", line 317, in _create\n    resp, body = self.api.client.post(url, body=body)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/client.py\", line 146, in post\n    return self._cs_request(url, 'POST', **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/client.py\", line 134, in _cs_request\n    return self.request(url, method, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/client.py\", line 123, in request\n    raise exceptions.from_response(resp, body)\nNotFound: Volume type with name None could not be found. (HTTP 404) (Request-ID: req-df874498-1447-41c9-8072-36a7eff2b196)\n"
+                ], 
+                "duration": 0.2723701000213623, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "cinder.create_volume": 0.2721750736236572
+                }
+            }, 
+            {
+                "timestamp": 1485885393.368836, 
+                "error": [
+                    "NotFound", 
+                    "Volume type with name None could not be found. (HTTP 404) (Request-ID: req-74c5a115-a518-497d-ba41-12521573825a)", 
+                    "Traceback (most recent call last):\n  File \"/usr/local/lib/python2.7/dist-packages/rally/task/runner.py\", line 72, in _run_scenario_once\n    getattr(scenario_inst, method_name)(**scenario_kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/plugins/openstack/scenarios/nova/servers.py\", line 180, in run\n    volume_type=volume_type)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/task/atomic.py\", line 113, in func_atomic_actions\n    f = func(self, *args, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/plugins/openstack/scenarios/cinder/utils.py\", line 158, in _create_volume\n    volume = client.create_volume(size, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/plugins/openstack/wrappers/cinder.py\", line 67, in create_volume\n    volume = self.client.volumes.create(size, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/v2/volumes.py\", line 269, in create\n    return self._create('/volumes', body, 'volume')\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/base.py\", line 317, in _create\n    resp, body = self.api.client.post(url, body=body)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/client.py\", line 146, in post\n    return self._cs_request(url, 'POST', **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/client.py\", line 134, in _cs_request\n    return self.request(url, method, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/client.py\", line 123, in request\n    raise exceptions.from_response(resp, body)\nNotFound: Volume type with name None could not be found. (HTTP 404) (Request-ID: req-74c5a115-a518-497d-ba41-12521573825a)\n"
+                ], 
+                "duration": 0.12858009338378906, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "cinder.create_volume": 0.12848687171936035
+                }
+            }, 
+            {
+                "timestamp": 1485885393.499947, 
+                "error": [
+                    "NotFound", 
+                    "Volume type with name None could not be found. (HTTP 404) (Request-ID: req-d411a971-04b7-4812-9405-732624a4a9e1)", 
+                    "Traceback (most recent call last):\n  File \"/usr/local/lib/python2.7/dist-packages/rally/task/runner.py\", line 72, in _run_scenario_once\n    getattr(scenario_inst, method_name)(**scenario_kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/plugins/openstack/scenarios/nova/servers.py\", line 180, in run\n    volume_type=volume_type)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/task/atomic.py\", line 113, in func_atomic_actions\n    f = func(self, *args, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/plugins/openstack/scenarios/cinder/utils.py\", line 158, in _create_volume\n    volume = client.create_volume(size, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/plugins/openstack/wrappers/cinder.py\", line 67, in create_volume\n    volume = self.client.volumes.create(size, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/v2/volumes.py\", line 269, in create\n    return self._create('/volumes', body, 'volume')\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/base.py\", line 317, in _create\n    resp, body = self.api.client.post(url, body=body)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/client.py\", line 146, in post\n    return self._cs_request(url, 'POST', **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/client.py\", line 134, in _cs_request\n    return self.request(url, method, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/client.py\", line 123, in request\n    raise exceptions.from_response(resp, body)\nNotFound: Volume type with name None could not be found. (HTTP 404) (Request-ID: req-d411a971-04b7-4812-9405-732624a4a9e1)\n"
+                ], 
+                "duration": 0.3150169849395752, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "cinder.create_volume": 0.3149721622467041
+                }
+            }, 
+            {
+                "timestamp": 1485885393.818823, 
+                "error": [
+                    "NotFound", 
+                    "Volume type with name None could not be found. (HTTP 404) (Request-ID: req-cb69ad0a-58bc-42b6-9fcd-894616fc89fc)", 
+                    "Traceback (most recent call last):\n  File \"/usr/local/lib/python2.7/dist-packages/rally/task/runner.py\", line 72, in _run_scenario_once\n    getattr(scenario_inst, method_name)(**scenario_kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/plugins/openstack/scenarios/nova/servers.py\", line 180, in run\n    volume_type=volume_type)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/task/atomic.py\", line 113, in func_atomic_actions\n    f = func(self, *args, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/plugins/openstack/scenarios/cinder/utils.py\", line 158, in _create_volume\n    volume = client.create_volume(size, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/plugins/openstack/wrappers/cinder.py\", line 67, in create_volume\n    volume = self.client.volumes.create(size, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/v2/volumes.py\", line 269, in create\n    return self._create('/volumes', body, 'volume')\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/base.py\", line 317, in _create\n    resp, body = self.api.client.post(url, body=body)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/client.py\", line 146, in post\n    return self._cs_request(url, 'POST', **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/client.py\", line 134, in _cs_request\n    return self.request(url, method, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/client.py\", line 123, in request\n    raise exceptions.from_response(resp, body)\nNotFound: Volume type with name None could not be found. (HTTP 404) (Request-ID: req-cb69ad0a-58bc-42b6-9fcd-894616fc89fc)\n"
+                ], 
+                "duration": 0.1205759048461914, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "cinder.create_volume": 0.12052392959594727
+                }
+            }, 
+            {
+                "timestamp": 1485885393.941653, 
+                "error": [
+                    "NotFound", 
+                    "Volume type with name None could not be found. (HTTP 404) (Request-ID: req-97e9eec7-e778-45d3-85ea-247a887d3720)", 
+                    "Traceback (most recent call last):\n  File \"/usr/local/lib/python2.7/dist-packages/rally/task/runner.py\", line 72, in _run_scenario_once\n    getattr(scenario_inst, method_name)(**scenario_kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/plugins/openstack/scenarios/nova/servers.py\", line 180, in run\n    volume_type=volume_type)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/task/atomic.py\", line 113, in func_atomic_actions\n    f = func(self, *args, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/plugins/openstack/scenarios/cinder/utils.py\", line 158, in _create_volume\n    volume = client.create_volume(size, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/rally/plugins/openstack/wrappers/cinder.py\", line 67, in create_volume\n    volume = self.client.volumes.create(size, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/v2/volumes.py\", line 269, in create\n    return self._create('/volumes', body, 'volume')\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/base.py\", line 317, in _create\n    resp, body = self.api.client.post(url, body=body)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/client.py\", line 146, in post\n    return self._cs_request(url, 'POST', **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/client.py\", line 134, in _cs_request\n    return self.request(url, method, **kwargs)\n  File \"/usr/local/lib/python2.7/dist-packages/cinderclient/client.py\", line 123, in request\n    raise exceptions.from_response(resp, body)\nNotFound: Volume type with name None could not be found. (HTTP 404) (Request-ID: req-97e9eec7-e778-45d3-85ea-247a887d3720)\n"
+                ], 
+                "duration": 0.11050701141357422, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 0.0, 
+                "atomic_actions": {
+                    "cinder.create_volume": 0.11046290397644043
+                }
+            }
+        ], 
+        "key": {
+            "kw": {
+                "runner": {
+                    "type": "constant", 
+                    "concurrency": 1, 
+                    "times": 5
+                }, 
+                "hooks": [], 
+                "args": {
+                    "volume_size": 1, 
+                    "flavor": {
+                        "name": "tempest1"
+                    }, 
+                    "image": {
+                        "name": "cirros"
+                    }, 
+                    "volume_type": "None", 
+                    "force_delete": false
+                }, 
+                "sla": {}, 
+                "context": {
+                    "users": {
+                        "users_per_tenant": 1, 
+                        "tenants": 1
+                    }
+                }
+            }, 
+            "name": "NovaServers.boot_server_from_volume_and_delete", 
+            "pos": 0
+        }, 
+        "full_duration": 4.064892053604126, 
+        "sla": []
+    }, 
+    {
+        "hooks": [], 
+        "load_duration": 31.151867151260376, 
+        "result": [
+            {
+                "timestamp": 1485885401.189288, 
+                "error": [], 
+                "duration": 4.576189994812012, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 2.0, 
+                "atomic_actions": {
+                    "cinder.create_snapshot": 2.325672149658203, 
+                    "cinder.delete_snapshot": 4.25015115737915
+                }
+            }, 
+            {
+                "timestamp": 1485885407.770211, 
+                "error": [], 
+                "duration": 4.602200031280518, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 2.0, 
+                "atomic_actions": {
+                    "cinder.create_snapshot": 2.364237070083618, 
+                    "cinder.delete_snapshot": 4.237758159637451
+                }
+            }, 
+            {
+                "timestamp": 1485885414.375898, 
+                "error": [], 
+                "duration": 4.531408071517944, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 2.0, 
+                "atomic_actions": {
+                    "cinder.create_snapshot": 2.314399003982544, 
+                    "cinder.delete_snapshot": 4.216903924942017
+                }
+            }, 
+            {
+                "timestamp": 1485885420.910728, 
+                "error": [], 
+                "duration": 4.605020999908447, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 2.0, 
+                "atomic_actions": {
+                    "cinder.create_snapshot": 2.3694541454315186, 
+                    "cinder.delete_snapshot": 4.23545503616333
+                }
+            }, 
+            {
+                "timestamp": 1485885427.519021, 
+                "error": [], 
+                "duration": 4.822134017944336, 
+                "output": {
+                    "additive": [], 
+                    "complete": []
+                }, 
+                "idle_duration": 2.0, 
+                "atomic_actions": {
+                    "cinder.create_snapshot": 2.3842711448669434, 
+                    "cinder.delete_snapshot": 4.437593936920166
+                }
+            }
+        ], 
+        "key": {
+            "kw": {
+                "runner": {
+                    "type": "constant", 
+                    "concurrency": 1, 
+                    "times": 5
+                }, 
+                "hooks": [], 
+                "args": {
+                    "force": false
+                }, 
+                "sla": {}, 
+                "context": {
+                    "users": {
+                        "users_per_tenant": 1, 
+                        "tenants": 1
+                    }, 
+                    "volumes": {
+                        "size": 1
+                    }
+                }
+            }, 
+            "name": "CinderVolumes.create_and_delete_snapshot", 
+            "pos": 0
+        }, 
+        "full_duration": 42.58351802825928, 
+        "sla": []
+    }
+]

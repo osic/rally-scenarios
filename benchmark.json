@@ -176,6 +176,87 @@
                 }
             }
         }
+    ],
+    "KeystoneBasic.authenticate_user_and_validate_token": [
+        {
+            "args": {},
+            "runner": {
+                "type": "constant",
+                "times": 20,
+                "concurrency": 5
+            },
+            "sla": {
+                "failure_rate": {
+                    "max": 0
+                }
+            }
+        }
+    ],
+    "NovaServers.boot_server": [
+        {
+            "args": {
+                "flavor": {
+                    "name": "{{flavor_name}}"
+                },
+                "image": {
+                    "name": "{{image_name}}"
+                }
+            },
+            "runner": {
+                "type": "constant",
+                "times": 1,
+                "concurrency": 1
+            },
+            "context": {
+                "users": {
+                    "tenants": 3,
+                    "users_per_tenant": 2
+                }
+            }
+        },
+        {
+            "args": {
+                "flavor": {
+                    "name": "{{flavor_name}}"
+                },
+                "image": {
+                    "name": "{{image_name}}"
+                }
+            },
+            "runner": {
+                "type": "constant",
+                "times": {{servers_to_build}},
+                "concurrency": {{servers_to_build}}
+            },
+            "context": {
+                "users": {
+                    "tenants": 3,
+                    "users_per_tenant": 2
+                }
+            }
+        }
+    ],
+        "NovaServers.boot_server": [
+        {
+            "args": {
+                "flavor": {
+                    "name": "{{flavor_name}}"
+                },
+                "image": {
+                    "name": "^cirros.*uec$"
+                }
+            },
+            "runner": {
+                "type": "constant",
+                "times": 1,
+                "concurrency": 1
+            },
+            "context": {
+                "users": {
+                    "tenants": 3,
+                    "users_per_tenant": 2
+                }
+            }
+        }
     ]
 }
-

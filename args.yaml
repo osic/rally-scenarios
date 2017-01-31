@@ -1,15 +1,2 @@
-tasks:
-  - include_vars:
-      dir: /etc/ansible/roles/os_tempest/defaults/
-      file: main.yml
-
-  - name: Populate Scenario Variables
-    args:
-      image_name: "{{ tempest_img_name }}"
-      flavor_name:  "{{ item.name }}"
-      iterations: 5
-      volume_type:
-      volume_size:
-      new_volume_size: 1
-      servers_to_build: 2
-    with_items: "{{ tempest_flavors }}"
+{flavor_name: tempest1, image_name: cirros, iterations: 5, new_volume_size: 2, servers_to_build: 2,
+  volume_size: 1, volume_type: null}

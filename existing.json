@@ -8,6 +8,6 @@
         "password": "{{PASSWORD}}",
         "tenant_name": "{{TENANT}}"
     },
-    "https_insecure": false,
-    "https_cacert": ""
+   "https_insecure": false,
+   "https_cacert": ""
 }
