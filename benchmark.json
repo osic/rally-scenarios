@@ -243,7 +243,7 @@
                     "name": "{{flavor_name}}"
                 },
                 "image": {
-                    "name": "^cirros.*uec$"
+                    "name": "{{image_name}}"
                 }
             },
             "runner": {
