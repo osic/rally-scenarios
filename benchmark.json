@@ -192,7 +192,7 @@
             }
         }
     ],
-    "NovaServers.boot_servers": [
+    "NovaServers.boot_server": [
         {
             "args": {
                 "flavor": {
