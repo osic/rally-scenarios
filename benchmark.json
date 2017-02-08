@@ -213,27 +213,6 @@
                     "users_per_tenant": 2
                 }
             }
-        },
-        {
-            "args": {
-                "flavor": {
-                    "name": "{{flavor_name}}"
-                },
-                "image": {
-                    "name": "((image_name}}"
-                }
-            },
-            "runner": {
-                "type": "constant",
-                "times": {{servers_to_build}},
-                "concurrency": {{servers_to_build}}
-            },
-            "context": {
-                "users": {
-                    "tenants": 3,
-                    "users_per_tenant": 2
-                }
-            }
         }
-    ]
+     ]
 }
