@@ -222,7 +222,7 @@
                     "name": "{{flavor_name}}"
                 },
                 "image": {
-                    "name": "((image_name}}"
+                    "name": "{{image_name}}"
                 }
             },
             "runner": {
