@@ -192,20 +192,41 @@
             }
         }
     ],
-    "NovaServers.boot_server": [
+ "NovaServers.boot_server": [
         {
             "args": {
                 "flavor": {
-                    "name": "{{flavor_name}}",
+                    "name": "tempest1"
                 },
                 "image": {
-                    "name": "{{image_name}}",
+                    "name": "cirros"
                 }
             },
             "runner": {
                 "type": "constant",
-                "times": {{servers_to_build}},
-                "concurrency": {{servers_to_build}},
+                "times": 1,
+                "concurrency": 1
+            },
+            "context": {
+                "users": {
+                    "tenants": 3,
+                    "users_per_tenant": 2
+                }
+            }
+        },
+        {
+            "args": {
+                "flavor": {
+                    "name": "tempest1"
+                },
+                "image": {
+                    "name": "cirros"
+                }
+            },
+            "runner": {
+                "type": "constant",
+                "times": 2,
+                "concurrency": 2
             },
             "context": {
                 "users": {
@@ -215,4 +236,28 @@
             }
         }
     ],
+        "NovaServers.boot_server": [
+        {
+            "args": {
+                "flavor": {
+                    "name": "tempest1"
+                },
+                "image": {
+                    "name": "cirros"
+                }
+            },
+            "runner": {
+                "type": "constant",
+                "times": 1,
+                "concurrency": 1
+            },
+            "context": {
+                "users": {
+                    "tenants": 3,
+                    "users_per_tenant": 2
+                }
+            }
+        }
+    ]
+}
 }
