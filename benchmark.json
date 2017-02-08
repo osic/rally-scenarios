@@ -201,7 +201,6 @@
                 "image": {
                     "name": "cirros"
                 }
-                "alternate_name": "NovaServers.boot_servers"
             },
             "runner": {
                 "type": "constant",
