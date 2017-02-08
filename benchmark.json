@@ -222,11 +222,12 @@
                 "image": {
                     "name": "cirros"
                 }
+                "alternate_name": "NovaServers.boot_servers"
             },
             "runner": {
                 "type": "constant",
-                "times": 2,
-                "concurrency": 2
+                "times": {{iterations}},
+                "concurrency": {{iterations}},
             },
             "context": {
                 "users": {
