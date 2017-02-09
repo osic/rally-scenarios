@@ -16,8 +16,8 @@ args_yaml['image_name'] = data_yaml['tempest_img_name']
 args_yaml['flavor_name'] = data_yaml['tempest_flavors'][0]['name']
 
 temp = bool(cinder_yaml['cinder_backend_lvm_inuse']
-if temp == True
-  args_yaml['volume_type'] = 'lvm'
+if temp == True:
+  args_yaml['volume_type'] = "lvm"
   
 with open('args.yaml', 'w') as outfile:
     yaml.dump(args_yaml, outfile)
