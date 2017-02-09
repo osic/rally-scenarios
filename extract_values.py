@@ -15,7 +15,7 @@ cinder_yaml = yaml.safe_load(cinder_backends)
 args_yaml['image_name'] = data_yaml['tempest_img_name']
 args_yaml['flavor_name'] = data_yaml['tempest_flavors'][0]['name']
 
-if (cinder_yaml['cinder_backend_lvm_inuse'] != -1)
+if (cinder_yaml['cinder_backend_lvm_inuse'])
   args_yaml['volume_type'] = 'lvm'
   
 with open('args.yaml', 'w') as outfile:
