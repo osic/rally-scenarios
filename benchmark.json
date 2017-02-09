@@ -1,6 +1,6 @@
 {% set flavor_name = flavor_name %}
 {% set image_name = image_name %}
-{% set volume_type = volume_type %}
+{% set volume_type = volume_type or "lvm" %}
 {% set volume_size = volume_size %}
 {% set new_volume_size = new_volume_size %}
 {% set iterations = iterations %}
