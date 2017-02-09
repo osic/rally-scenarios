@@ -14,7 +14,10 @@ cinder_yaml = yaml.safe_load(cinder_backends)
 
 args_yaml['image_name'] = data_yaml['tempest_img_name']
 args_yaml['flavor_name'] = data_yaml['tempest_flavors'][0]['name']
-args_yaml['volume_type'] = cinder_yaml['cinder_backends'][0]['lvm']
+
+if (cinder_backend_lvm_inuse: '{{ (cinder_backends|default("")|to_json).find("lvm") != -1 }}') {
+  args_yaml['volume_type'] = 'lvm'
+}
 
 with open('args.yaml', 'w') as outfile:
     yaml.dump(args_yaml, outfile)
