@@ -214,5 +214,54 @@
                 }
             }
         }
-    ]
+    ],
+    "NovaServers.boot_server_from_volume_snapshot": [
+        {
+            "args": {
+                "flavor": {
+                    "name": "{{flavor_name}}"
+                },
+                "image": {
+                    "name": "^cirros.*uec$"
+                },
+                "volume_size": 10,
+                "volume_type": "{{volume_type}}"
+            },
+            "runner": {
+                "type": "constant",
+                "times": 10,
+                "concurrency": 2
+            },
+            "context": {
+                "users": {
+                    "tenants": 3,
+                    "users_per_tenant": 2
+                }
+            }
+        }
+    ],
+    "GlanceImages.create_image_and_boot_instances": [
+        {
+            "args": {
+                "image_location": "http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img",
+                "container_format": "bare",
+                "disk_format": "qcow2",
+                "flavor": {
+                    "name": "{{flavor_name}}"
+                },
+                "number_instances": 2
+            },
+            "runner": {
+                "type": "constant",
+                "times": 10,
+                "concurrency": 2
+            },
+            "context": {
+                "users": {
+                    "tenants": 3,
+                    "users_per_tenant": 5
+                }
+            }
+        }
+    ],
 }
