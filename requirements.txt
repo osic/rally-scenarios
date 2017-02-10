@@ -1,9 +1,0 @@
-build-essential 
-libssl-dev 
-libffi-dev 
-python-dev 
-libxml2-dev 
-libxslt1-dev 
-libpq-dev 
-python-pip 
-git
