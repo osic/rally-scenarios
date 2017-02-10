@@ -196,10 +196,10 @@
         {
             "args": {
                 "flavor": {
-                    "name": "tempest1"
+                    "name": "{{flavor_name}}"
                 },
                 "image": {
-                    "name": "cirros"
+                    "name": "{{image_name}}"
                 }
             },
             "runner": {
@@ -222,7 +222,7 @@
                     "name": "{{flavor_name}}"
                 },
                 "image": {
-                    "name": "^cirros.*uec$"
+                    "name": "{{image_name}}"
                 },
                 "volume_size": 10,
                 "volume_type": "{{volume_type}}"
