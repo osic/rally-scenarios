@@ -9,7 +9,7 @@ with open('args.yaml') as f:
 with open('/etc/ansible/roles/os_cinder/defaults/main.yml') as f:
   cinder_backends = f.read()
   
-config = configparser.ConfigParser()
+config = ConfigParser.ConfigParser()
 config.read('~/tempest/etc/tempest.conf')
   
 args_yaml = yaml.safe_load(args)
