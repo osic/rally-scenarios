@@ -12,7 +12,6 @@ with open('/etc/ansible/roles/os_cinder/defaults/main.yml') as f:
 config = ConfigParser.ConfigParser()
 config.read('/home/ubuntu/tempest/etc/tempest.conf')
 config.sections()
-print config.sections()
   
 args_yaml = yaml.safe_load(args)
 data_yaml = yaml.safe_load(data)
