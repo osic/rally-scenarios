@@ -1,6 +1,6 @@
 import yaml
 import json
-import configparser
+import ConfigParser
 
 with open('/etc/ansible/roles/os_tempest/defaults/main.yml') as f:
   data = f.read()
