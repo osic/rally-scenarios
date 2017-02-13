@@ -16,7 +16,7 @@ cinder_yaml = yaml.safe_load(cinder_backends)
 flavor_yaml = yaml.safe_load(flavor)
 
 args_yaml['image_name'] = data_yaml['tempest_img_name']
-args_yaml['flavor_name'] = flavor_yaml['Check if tempest flavor 201 exists'][0]['register']
+args_yaml['flavor_name'] = flavor_yaml[0][0]['register']
 
 temp = bool(cinder_yaml['cinder_backend_lvm_inuse'])
 if temp == True:      
