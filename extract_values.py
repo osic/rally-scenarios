@@ -1,6 +1,6 @@
 import yaml
 import json
-import ConfigParser
+from ConfigParser import SafeConfigParser
 
 with open('/etc/ansible/roles/os_tempest/defaults/main.yml') as f:
   data = f.read()
@@ -9,8 +9,10 @@ with open('args.yaml') as f:
 with open('/etc/ansible/roles/os_cinder/defaults/main.yml') as f:
   cinder_backends = f.read()
   
-config = ConfigParser.ConfigParser()
+config = SafeConfigParser()
 config.read('~/tempest/etc/tempest.conf')
+config.sections()
+print config.sections()
   
 args_yaml = yaml.safe_load(args)
 data_yaml = yaml.safe_load(data)
