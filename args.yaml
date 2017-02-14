@@ -1,2 +1,2 @@
-{flavor_name: tempest1, image_name: cirros, iterations: 3, new_volume_size: m2.large, servers_to_build: 1,
-  volume_size: m1.tiny, volume_type: null}
+{flavor_name: tempest1, image_name: cirros, iterations: 3, new_volume_size: 8, servers_to_build: 1,
+  volume_size: 1, volume_type: null}
