@@ -5,6 +5,29 @@
 {% set new_volume_size = new_volume_size %}
 {% set iterations = iterations %}
 {
+   "NovaServers.boot_server": [
+        {
+            "args": {
+                "flavor": {
+                    "name": "{{flavor_name}}"
+                },
+                "image": {
+                    "name": "{{image_name}}"
+                }
+            },
+            "runner": {
+                "type": "constant",
+                "times": {{iterations}},
+                "concurrency": 1,
+            },
+            "context": {
+                "users": {
+                    "tenants": 3,
+                    "users_per_tenant": 2
+                }
+            }
+        }
+    ],
     "NovaServers.boot_and_delete_server": [
         {
             "args": {
@@ -188,29 +211,6 @@
             "sla": {
                 "failure_rate": {
                     "max": 0
-                }
-            }
-        }
-    ],
- "NovaServers.boot_server": [
-        {
-            "args": {
-                "flavor": {
-                    "name": "{{flavor_name}}"
-                },
-                "image": {
-                    "name": "{{image_name}}"
-                }
-            },
-            "runner": {
-                "type": "constant",
-                "times": {{iterations}},
-                "concurrency": {{iterations}},
-            },
-            "context": {
-                "users": {
-                    "tenants": 3,
-                    "users_per_tenant": 2
                 }
             }
         }
