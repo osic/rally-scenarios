@@ -1,10 +1,33 @@
 {% set flavor_name = flavor_name %}
 {% set image_name = image_name %}
-{% set volume_type = volume_type %}
+{% set volume_type = volume_type or "lvm" %}
 {% set volume_size = volume_size %}
 {% set new_volume_size = new_volume_size %}
 {% set iterations = iterations %}
 {
+   "NovaServers.boot_server": [
+        {
+            "args": {
+                "flavor": {
+                    "name": "{{flavor_name}}"
+                },
+                "image": {
+                    "name": "{{image_name}}"
+                }
+            },
+            "runner": {
+                "type": "constant",
+                "times": {{iterations}},
+                "concurrency": 1,
+            },
+            "context": {
+                "users": {
+                    "tenants": 3,
+                    "users_per_tenant": 2
+                }
+            }
+        }
+    ],
     "NovaServers.boot_and_delete_server": [
         {
             "args": {
@@ -176,6 +199,44 @@
                 }
             }
         }
-    ]
+    ],
+    "KeystoneBasic.authenticate_user_and_validate_token": [
+        {
+            "args": {},
+            "runner": {
+                "type": "constant",
+                "times": 20,
+                "concurrency": 5
+            },
+            "sla": {
+                "failure_rate": {
+                    "max": 0
+                }
+            }
+        }
+    ],
+    "GlanceImages.create_image_and_boot_instances": [
+        {
+            "args": {
+                "image_location": "http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img",
+                "container_format": "bare",
+                "disk_format": "qcow2",
+                "flavor": {
+                    "name": "{{flavor_name}}"
+                },
+                "number_instances": 2
+            },
+            "runner": {
+                "type": "constant",
+                "times": 10,
+                "concurrency": 2
+            },
+            "context": {
+                "users": {
+                    "tenants": 3,
+                    "users_per_tenant": 5
+                }
+            }
+        }
+    ],
 }
-
