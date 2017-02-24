@@ -6,7 +6,7 @@ with open('args.yaml') as f:
   args = f.read()
   
 config = ConfigParser.ConfigParser()
-config.read('/home/etc/tempest.conf')
+config.read('/home/ubuntu/etc/tempest.conf')
 config.sections()
   
 args_yaml = yaml.safe_load(args)
