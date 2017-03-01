@@ -4,8 +4,9 @@
 {% set volume_size = volume_size %}
 {% set new_volume_size = new_volume_size %}
 {% set iterations = iterations %}
+{% set time = upgrade %}
 {
-   "NovaServers.boot_server": [
+   "NovaServers.boot_server_{{upgrade}}": [
         {
             "args": {
                 "flavor": {
@@ -28,7 +29,7 @@
             }
         }
     ],
-    "NovaServers.boot_and_delete_server": [
+    "NovaServers.boot_and_delete_server_{{upgrade}}": [
         {
             "args": {
                 "flavor": {
@@ -75,7 +76,7 @@
             }
         }
     ],
-    "NovaServers.boot_server_from_volume_and_delete": [
+    "NovaServers.boot_server_from_volume_and_delete_{{upgrade}}": [
         {
             "args": {
                 "flavor": {
@@ -101,7 +102,7 @@
             }
         }
     ],
-    "CinderVolumes.create_and_delete_snapshot": [
+    "CinderVolumes.create_and_delete_snapshot_{{upgrade}}": [
         {
             "args": {
                 "force": false
@@ -122,7 +123,7 @@
             }
         }
     ],
-    "CinderVolumes.create_volume_and_clone": [
+    "CinderVolumes.create_volume_and_clone_{{upgrade}}": [
         {
             "args": {
                 "size": {{volume_size}}
@@ -140,7 +141,7 @@
             }
         }
     ],
-    "CinderVolumes.create_volume_from_snapshot": [
+    "CinderVolumes.create_volume_from_snapshot_{{upgrade}}": [
         {
             "args": {
                 "do_delete": true
@@ -161,7 +162,7 @@
             }
         }
     ],
-     "CinderVolumes.create_and_extend_volume": [
+     "CinderVolumes.create_and_extend_volume_{{upgrade}}": [
         {
             "args": {
                 "size": {{volume_size}},
@@ -180,7 +181,7 @@
             }
         }
     ],
-    "GlanceImages.create_and_delete_image": [
+    "GlanceImages.create_and_delete_image_{{upgrade}}": [
         {
             "args": {
                 "image_location": "http://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-disk1.img",
@@ -200,7 +201,7 @@
             }
         }
     ],
-    "KeystoneBasic.authenticate_user_and_validate_token": [
+    "KeystoneBasic.authenticate_user_and_validate_token_{{upgrade}}": [
         {
             "args": {},
             "runner": {
@@ -215,7 +216,7 @@
             }
         }
     ],
-    "GlanceImages.create_image_and_boot_instances": [
+    "GlanceImages.create_image_and_boot_instances_{{upgrade}}": [
         {
             "args": {
                 "image_location": "http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img",
