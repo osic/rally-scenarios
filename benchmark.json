@@ -6,7 +6,7 @@
 {% set iterations = iterations %}
 {% set time = upgrade %}
 {
-   "NovaServers.boot_server{{upgrade}}": [
+   "NovaServers.boot_server": [
         {
             "args": {
                 "flavor": {
@@ -29,7 +29,7 @@
             }
         }
     ],
-    "NovaServers.boot_and_delete_server{{upgrade}}": [
+    "NovaServers.boot_and_delete_server": [
         {
             "args": {
                 "flavor": {
@@ -76,7 +76,7 @@
             }
         }
     ],
-    "NovaServers.boot_server_from_volume_and_delete{{upgrade}}": [
+    "NovaServers.boot_server_from_volume_and_delete": [
         {
             "args": {
                 "flavor": {
@@ -123,7 +123,7 @@
             }
         }
     ],
-    "CinderVolumes.create_volume_and_clone{{upgrade}}": [
+    "CinderVolumes.create_volume_and_clone": [
         {
             "args": {
                 "size": {{volume_size}}
@@ -141,7 +141,7 @@
             }
         }
     ],
-    "CinderVolumes.create_volume_from_snapshot{{upgrade}}": [
+    "CinderVolumes.create_volume_from_snapshot": [
         {
             "args": {
                 "do_delete": true
@@ -162,7 +162,7 @@
             }
         }
     ],
-     "CinderVolumes.create_and_extend_volume{{upgrade}}": [
+     "CinderVolumes.create_and_extend_volume": [
         {
             "args": {
                 "size": {{volume_size}},
@@ -181,7 +181,7 @@
             }
         }
     ],
-    "GlanceImages.create_and_delete_image{{upgrade}}": [
+    "GlanceImages.create_and_delete_image": [
         {
             "args": {
                 "image_location": "http://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-disk1.img",
@@ -201,7 +201,7 @@
             }
         }
     ],
-    "KeystoneBasic.authenticate_user_and_validate_token{{upgrade}}": [
+    "KeystoneBasic.authenticate_user_and_validate_token": [
         {
             "args": {},
             "runner": {
@@ -216,7 +216,7 @@
             }
         }
     ],
-    "GlanceImages.create_image_and_boot_instances{{upgrade}}": [
+    "GlanceImages.create_image_and_boot_instances": [
         {
             "args": {
                 "image_location": "http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img",
