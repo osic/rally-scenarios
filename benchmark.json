@@ -102,7 +102,7 @@
             }
         }
     ],
-    "CinderVolumes.create_and_delete_snapshot{{upgrade}}": [
+    "CinderVolumes.create_and_delete_snapshot": [
         {
             "args": {
                 "force": false
