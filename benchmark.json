@@ -229,8 +229,8 @@
             },
             "runner": {
                 "type": "constant",
-                "times": 10,
-                "concurrency": 2
+                "times": {{iterations}},
+                "concurrency": 1
             },
             "context": {
                 "users": {
